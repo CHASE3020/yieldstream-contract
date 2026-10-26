@@ -188,6 +188,10 @@ impl YieldStreamDistributor {
         let mut distribution = storage::get_distribution(&env, distribution_id)?;
         distribution.creator.require_auth();
 
+        if distribution.status == DistributionStatus::Completed {
+            return Err(ContractError::NothingToSweep);
+        }
+
         let is_cancelled = distribution.status == DistributionStatus::Cancelled;
         let is_expired =
             distribution.end_time > 0 && env.ledger().timestamp() >= distribution.end_time;
