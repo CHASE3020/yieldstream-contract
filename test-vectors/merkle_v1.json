@@ -1,0 +1,82 @@
+{
+  "version": "v1.0.0",
+  "description": "Deterministic Merkle test vectors for YieldStream Distributor contract",
+  "trees": [
+    {
+      "name": "balanced_4_recipients",
+      "distribution_id": 1,
+      "total_amount": 120000,
+      "num_recipients": 4,
+      "root_hex": "627e65c5f943d5b36d3909b253b0c7578a92a31a7f6b552781d0cf0da0be153a",
+      "claims": [
+        {
+          "index": 0,
+          "recipient": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+          "amount": 10000,
+          "leaf_hex": "07058dcaa5755a264fa03e9f71fc3e370084b7468aa9e03bbf1672a538c8da23",
+          "proof_hex": [
+            "66b485f49d3e9432f70194394f1ad5bce9e8f545faaf99d3174ad994297e949d",
+            "4d2d8dc031a4fa289b7e9d71771f2131816cbded6ff572344a891d5c88cc69ac"
+          ]
+        },
+        {
+          "index": 1,
+          "recipient": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOLZM",
+          "amount": 25000,
+          "leaf_hex": "66b485f49d3e9432f70194394f1ad5bce9e8f545faaf99d3174ad994297e949d",
+          "proof_hex": [
+            "07058dcaa5755a264fa03e9f71fc3e370084b7468aa9e03bbf1672a538c8da23",
+            "4d2d8dc031a4fa289b7e9d71771f2131816cbded6ff572344a891d5c88cc69ac"
+          ]
+        },
+        {
+          "index": 2,
+          "recipient": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARQG5",
+          "amount": 35000,
+          "leaf_hex": "ba9fd43eebe88e2100f774de6b5fc478d81e9080900e1b87b8aae975c67bea2f",
+          "proof_hex": [
+            "707fdad60f264088bf844073da40b66df171a1114e1bdb848ae2864d8d7cffde",
+            "39cb8ae2a7ff97c0cc0f92d01b09445f199c11cbbe02746467071ddd569d6b01"
+          ]
+        },
+        {
+          "index": 3,
+          "recipient": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATYON",
+          "amount": 50000,
+          "leaf_hex": "707fdad60f264088bf844073da40b66df171a1114e1bdb848ae2864d8d7cffde",
+          "proof_hex": [
+            "ba9fd43eebe88e2100f774de6b5fc478d81e9080900e1b87b8aae975c67bea2f",
+            "39cb8ae2a7ff97c0cc0f92d01b09445f199c11cbbe02746467071ddd569d6b01"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "balanced_2_recipients",
+      "distribution_id": 2,
+      "total_amount": 1250000,
+      "num_recipients": 2,
+      "root_hex": "8d5de42b5b36f4c95587cf3f63c37855a186e08f50764ca9fbd7fbb30e72c8ff",
+      "claims": [
+        {
+          "index": 0,
+          "recipient": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAX5",
+          "amount": 500000,
+          "leaf_hex": "f1eb7eb990daf278c99535c9b58eeec5fb65465de1be8d33043417f64054169d",
+          "proof_hex": [
+            "45d0de3c6878f4368307e3fe0b1ee73f6f324a24948ed200addf3e0583c2f5d0"
+          ]
+        },
+        {
+          "index": 1,
+          "recipient": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXI7N",
+          "amount": 750000,
+          "leaf_hex": "45d0de3c6878f4368307e3fe0b1ee73f6f324a24948ed200addf3e0583c2f5d0",
+          "proof_hex": [
+            "f1eb7eb990daf278c99535c9b58eeec5fb65465de1be8d33043417f64054169d"
+          ]
+        }
+      ]
+    }
+  ]
+}
