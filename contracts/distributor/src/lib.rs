@@ -106,6 +106,9 @@ impl YieldStreamDistributor {
         if index >= distribution.num_recipients {
             return Err(ContractError::InvalidLeafIndex);
         }
+        if storage::is_claimed(&env, distribution_id, index) {
+            return Err(ContractError::AlreadyClaimed);
+        }
         if distribution.status == DistributionStatus::Cancelled {
             return Err(ContractError::DistributionCancelled);
         }
@@ -114,9 +117,6 @@ impl YieldStreamDistributor {
         }
         if distribution.end_time > 0 && env.ledger().timestamp() >= distribution.end_time {
             return Err(ContractError::DistributionExpired);
-        }
-        if storage::is_claimed(&env, distribution_id, index) {
-            return Err(ContractError::AlreadyClaimed);
         }
 
         let leaf = merkle::compute_leaf(&env, distribution_id, index, &recipient, amount);
