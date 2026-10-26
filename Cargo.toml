@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [
+    "contracts/distributor",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["YieldStream Protocol <dev@yieldstream.org>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/CHASE3020/yieldstream-contract"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true
