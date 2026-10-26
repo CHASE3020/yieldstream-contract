@@ -13,6 +13,7 @@ use soroban_sdk::{
     token, Address, BytesN, Env, Vec,
 };
 
+#[allow(dead_code)]
 pub struct TestFixture<'a> {
     pub env: Env,
     pub contract_id: Address,
